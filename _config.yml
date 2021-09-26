@@ -51,6 +51,12 @@ topics:
     web_url: https://github.com/topics/python
     image_url: https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/python/python.png
 
+  - name: Tensorflow
+    web_url: https://www.tensorflow.org/
+    image_url: https://commons.wikimedia.org/wiki/File:Tensorflow_logo.svg
+    
   - name: Machine Learning
   
   - name: Deep Learning
+
+
