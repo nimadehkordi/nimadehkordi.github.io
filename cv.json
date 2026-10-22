@@ -2,27 +2,33 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Nima Riahi Dehkordi",
-    "label": "Senior Software Engineer — Embedded AI",
+    "label": "Senior Software Engineer — Embedded AI & Perception",
     "email": "nima.dehkordi@protonmail.com",
-    "summary": "Real-time C++ and embedded AI engineer with 6+ years turning prototypes into software that runs on real hardware — automotive SoCs, 3D cameras and safety-critical driving stacks.",
+    "summary": "Software engineer with 6+ years taking ML models from research code to reliable, real-time software on real hardware — embedded SoCs, industrial 3D cameras and safety-critical systems. Strong in modern C++ and Python, model quantization and on-device deployment, and the testing and validation that make AI trustworthy in the field. Looking to apply this to robotics, medical technology, education and fintech.",
     "location": { "city": "Munich", "countryCode": "DE" },
     "profiles": [
       { "network": "LinkedIn", "username": "nimariahidehkordi", "url": "https://www.linkedin.com/in/nimariahidehkordi/" },
       { "network": "GitHub", "username": "nimadehkordi", "url": "https://github.com/nimadehkordi" }
     ],
     "x-tagline": "Embedded AI, on real hardware.",
-    "x-focus": "Real-time C++ · Embedded ML",
+    "x-focus": "Real-time C++ · On-device ML · Perception",
     "x-yearsExperience": "6+",
     "x-cvPdf": ""
   },
   "work": [
     {
       "name": "CARIAD SE",
-      "position": "Senior Software Engineer",
+      "position": "Senior Software Engineer, AI Prediction",
       "location": "Munich",
       "startDate": "2023-11",
-      "summary": "Embedded AI in the Automated Driving Alliance with Bosch (L2++). On-board trajectory prediction on a Qualcomm SoC (QNN/QNX), safety-relevant C++20 components to ISO 26262 and ASPICE, and the KPI and SiL/PiL/HiL validation framework.",
-      "highlights": ["Cut on-board inference latency by 80% on an automotive SoC."]
+      "summary": "Deploying and validating a deep-learning trajectory-prediction model on a Qualcomm SoC (QNN/QNX) in a safety-critical, real-time stack, with C++20 components developed to ISO 26262 and ASPICE.",
+      "highlights": [
+        "Contributed to the ONNX-to-QNN quantization pipeline that brought on-board inference down to 8 ms.",
+        "Improved mixed-precision quantization and masked normalization for the model, plus supporting tooling.",
+        "Built smoke tests, KPIs and an on-board evaluation suite for the model, with Databricks dashboards.",
+        "Owned recompute and deployment pipelines (DAGs) across x86 and embedded target boards.",
+        "Fixed and hardened pre-/post-processing and contributed to vehicle demos and visualization tooling."
+      ]
     },
     {
       "name": "Autonomous Reply",
@@ -30,7 +36,12 @@
       "location": "Munich",
       "startDate": "2022-06",
       "endDate": "2023-11",
-      "summary": "Shadow-mode testing and VAAFO concepts for an automotive client: a ROS 2 prototype, an intelligent edge-case trigger and data collection on AUTOSAR Adaptive. Agile coach for the team."
+      "summary": "Shadow-mode testing for a client's driving software: run a candidate function next to the live one on real data and capture the cases where they disagree.",
+      "highlights": [
+        "Built a ROS 2 prototype with an intelligent edge-case trigger for targeted data collection.",
+        "Developed data-collection concepts (VAAFO) on AUTOSAR Adaptive.",
+        "Acted as agile coach for the team."
+      ]
     },
     {
       "name": "Ferchau Engineering, at SICK AG",
@@ -38,7 +49,12 @@
       "location": "Freiburg",
       "startDate": "2021-02",
       "endDate": "2022-05",
-      "summary": "Embedded applications and firmware features for 3D stereo and Time-of-Flight cameras, lightweight person detection on edge devices, system tests and CI/CD."
+      "summary": "Embedded software for industrial 3D stereo and Time-of-Flight cameras used in automation and robotics.",
+      "highlights": [
+        "Developed embedded applications and firmware features on Yocto-based embedded Linux.",
+        "Deployed lightweight real-time person detection on NVIDIA Jetson with TensorRT.",
+        "Wrote system tests and maintained CI/CD for the camera software."
+      ]
     },
     {
       "name": "Mercedes-Benz AG",
@@ -46,42 +62,42 @@
       "location": "Ulm & Stuttgart",
       "startDate": "2018-11",
       "endDate": "2020-09",
-      "summary": "Perception for vulnerable road users: re-identification, multi-person pose tracking and 3D pedestrian detection from LiDAR."
+      "summary": "Camera-based perception research for vulnerable road users: deep metric learning for person re-identification, including two new benchmarks and uncertainty modelling."
     }
   ],
   "projects": [
     {
-      "name": "On-board trajectory prediction",
+      "name": "Real-time on-device inference",
       "entity": "CARIAD",
       "type": "featured",
-      "description": "Built the ONNX-to-QNN quantization pipeline that cut on-board inference latency by 80% on a Qualcomm automotive SoC.",
-      "keywords": ["C++20", "QNN", "QNX"]
-    },
-    {
-      "name": "Shadow-mode testing",
-      "entity": "Autonomous Reply",
-      "type": "featured",
-      "description": "Prototype that runs a candidate driving function beside the active one on real fleet data, with an intelligent edge-case trigger.",
-      "keywords": ["ROS 2", "AUTOSAR Adaptive"]
+      "description": "Quantization, deployment and on-board evaluation of a deep-learning prediction model on a Qualcomm SoC — contributed to the pipeline that brought inference down to 8 ms.",
+      "keywords": ["C++20", "ONNX · QNN", "Mixed precision", "QNX"]
     },
     {
       "name": "3D camera perception",
       "entity": "SICK AG",
       "type": "featured",
-      "description": "Embedded applications and firmware for stereo and Time-of-Flight cameras, plus real-time person detection on edge devices.",
-      "keywords": ["C++", "Edge ML"]
+      "description": "Embedded applications and firmware for industrial stereo and Time-of-Flight cameras, plus real-time person detection on edge hardware.",
+      "keywords": ["C++", "Jetson · TensorRT", "Yocto"]
     },
     {
-      "name": "VRU re-identification",
+      "name": "Person re-identification",
       "entity": "Mercedes-Benz · M.Sc. thesis",
       "type": "featured",
-      "description": "Two new re-ID benchmarks for autonomous driving; up to +15.9% mAP, 89.4% mAP on Market1501.",
-      "keywords": ["PyTorch", "Metric learning"]
+      "description": "Deep metric learning with heteroscedastic uncertainty; introduced Waymo-ReID and ECP-ReID benchmarks; up to +15.9% mAP, 89.4% mAP on Market1501.",
+      "keywords": ["PyTorch", "Metric learning", "Computer vision"]
+    },
+    {
+      "name": "Shadow-mode testing",
+      "entity": "Autonomous Reply",
+      "type": "featured",
+      "description": "Prototype that runs a candidate function beside the active one on real data, with an intelligent trigger that captures edge cases.",
+      "keywords": ["ROS 2", "AUTOSAR Adaptive"]
     },
     { "name": "Auto-ML", "type": "open-source", "description": "Neural architecture search with hyperparameter optimization.", "keywords": ["Python"], "url": "https://github.com/nimadehkordi/Auto-ML" },
+    { "name": "Microbusiness Forecast", "type": "open-source", "description": "Time-series forecasting of US microbusiness density.", "keywords": ["Python"], "url": "https://github.com/nimadehkordi/godaddy-microbusiness-forecast" },
     { "name": "LBM-Python", "type": "open-source", "description": "Lattice Boltzmann methods for fluid simulation. ★ 9", "keywords": ["Python"], "url": "https://github.com/nimadehkordi/LBM-Python" },
-    { "name": "AESL", "type": "open-source", "description": "Advanced Embedded Systems Laboratory.", "keywords": ["C"], "url": "https://github.com/nimadehkordi/AESL" },
-    { "name": "Microbusiness Forecast", "type": "open-source", "description": "Time-series forecasting of US microbusiness density.", "keywords": ["Python"], "url": "https://github.com/nimadehkordi/godaddy-microbusiness-forecast" }
+    { "name": "AESL", "type": "open-source", "description": "Advanced Embedded Systems Laboratory.", "keywords": ["C"], "url": "https://github.com/nimadehkordi/AESL" }
   ],
   "education": [
     {
@@ -90,7 +106,7 @@
       "area": "Embedded Systems Engineering",
       "startDate": "2018",
       "endDate": "2020",
-      "summary": "Focus on AI, autonomous driving, robotics and AutoML. Thesis: deep metric learning for vulnerable road users in autonomous driving."
+      "summary": "Focus on AI, robotics, autonomous systems and AutoML. Thesis (with Mercedes-Benz): deep metric learning for person re-identification of vulnerable road users."
     },
     {
       "institution": "Shahid Beheshti University · Tehran",
@@ -98,7 +114,7 @@
       "area": "Computer Hardware Engineering",
       "startDate": "2012",
       "endDate": "2017",
-      "summary": "IoT and hardware design. Thesis: a reliable smart-home network."
+      "summary": "IoT and hardware design. Thesis: a reliable smart-home network on Bluetooth Low Energy."
     }
   ],
   "certificates": [
@@ -110,12 +126,12 @@
   ],
   "skills": [
     { "name": "Languages", "keywords": ["C++ 17/20", "Python", "MATLAB"] },
-    { "name": "Embedded AI", "keywords": ["ONNX · QNN · QNX", "Model quantization", "Real-time inference"] },
-    { "name": "Machine learning", "keywords": ["PyTorch (Lightning)", "TensorFlow · TFX", "OpenCV · scikit-learn"] },
-    { "name": "Autonomous driving", "keywords": ["ROS 2", "AUTOSAR Adaptive", "Sensor fusion"] },
+    { "name": "On-device ML", "keywords": ["Quantization (mixed precision)", "ONNX · QNN · TensorRT", "Real-time inference"] },
+    { "name": "Machine learning", "keywords": ["PyTorch (Lightning)", "Computer vision · OpenCV", "TensorFlow · scikit-learn"] },
+    { "name": "Robotics & embedded", "keywords": ["ROS 2", "Embedded Linux (Yocto) · QNX", "NVIDIA Jetson · Qualcomm SoCs"] },
     { "name": "MLOps & data", "keywords": ["Databricks · PySpark", "Airflow", "Azure ML · GCP · AWS"] },
-    { "name": "Build & V&V", "keywords": ["Bazel · Docker · CI/CD", "SiL / PiL / HiL", "gtest · pytest"] },
-    { "name": "Safety & process", "keywords": ["ISO 26262 (ASIL-B)", "SOTIF (ISO 21448)", "ASPICE"] }
+    { "name": "Build & testing", "keywords": ["Bazel · Docker · CI/CD", "SiL / PiL / HiL", "gtest · pytest"] },
+    { "name": "Safety-critical development", "keywords": ["ISO 26262 (ASIL-B)", "SOTIF (ISO 21448)", "ASPICE"] }
   ],
   "languages": [
     { "language": "Persian", "fluency": "Native" },
